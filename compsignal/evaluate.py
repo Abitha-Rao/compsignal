@@ -25,4 +25,8 @@ def score(path="eval/labels.json"):
         line(f"  {kind}", sum(r["label"] for r in sub), len(sub))
     tools = [r for r in rows if r["kind"] == "tool" and r["label"] == 1]
     line("Tool mentions that point to a specific platform", sum(r.get("specific", 0) for r in tools), len(tools))
+    both = [r for r in tools if "sys_specific" in r]
+    if both:
+        agree = sum(1 for r in both if bool(r["sys_specific"]) == bool(r.get("specific", 0)))
+        line("Specific-vs-listed flag matches my reading", agree, len(both))
     return "\n".join(out)

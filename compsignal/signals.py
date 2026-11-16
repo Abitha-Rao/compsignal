@@ -17,10 +17,13 @@ COMP_ROLE_TITLE = re.compile(
 )
 # Day-to-day commission administration described in a posting for any role.
 COMP_DUTY = re.compile(
-    r"\b(calculat\w*|administ\w*|process\w*|audit\w*|own\w*)\W+(?:\w+\W+){0,3}?"
-    r"(commissions?|sales\s+comp\w*|incentive\s+(comp\w*|plans?))\b",
+    r"\b(calculat\w*|administ\w*|process\w*|audit\w*|reconcil\w*|validat\w*|support\w*|own\w*)\W+(?:\w+\W+){0,3}?"
+    r"(commissions?|incentive\s+comp\w*|incentive\s+plans?"
+    r"|sales\s+comp\w*\s+(?:plans?|payouts?|processes|administration))\b",
     re.I,
 )
+# Accounting for commissions (ASC 340-40 etc.) is not commission operations.
+ACCOUNTING_CONTEXT = re.compile(r"ASC\s*340|deferred commission|capitaliz\w*|amortiz\w*", re.I)
 # Must sit in the same sentence ([^.!?]), so "...bonus and commissions. Proficient with Excel" is not a hit.
 EXCEL_COMMISSION = re.compile(
     r"\b(excel|spreadsheets?|google\s+sheets)\b[^.!?]{0,80}\bcommissions?\b"
@@ -74,7 +77,7 @@ def analyze_job(job):
         out.append(Signal("comp_role_title", title_hit.group(0), title, title, url))
     else:
         m = COMP_DUTY.search(text)
-        if m:
+        if m and not ACCOUNTING_CONTEXT.search(text[max(0, m.start() - 200): m.end() + 200]):
             out.append(Signal("comp_duty", m.group(0), _snippet(text, m), title, url))
     m = EXCEL_COMMISSION.search(text)
     if m:

@@ -80,12 +80,15 @@ def cmd_sample(a):
         if k not in seen:
             seen.add(k); uniq.append((company, x))
     items = uniq
+    if a.exclude:  # keep a fresh sample independent of items already labelled
+        done = {(r["company"], r["kind"], r["detail"], r["url"]) for r in json.load(open(a.exclude))}
+        items = [(c, x) for c, x in items if (c, x.kind, x.detail, x.job_url) not in done]
     random.Random(a.seed).shuffle(items)
     os.makedirs("eval", exist_ok=True)
     sheet, key = [], []
     for i, (company, x) in enumerate(items[: a.n], 1):
         sheet.append(f"{i}. [{company}] {x.kind}/{x.detail} - {x.job_title}\n   \"{x.snippet[:300]}\"\n   {x.job_url}\n")
-        key.append({"n": i, "company": company, "kind": x.kind, "detail": x.detail, "url": x.job_url, "label": None})
+        key.append({"n": i, "company": company, "kind": x.kind, "detail": x.detail, "url": x.job_url, "label": None, "sys_specific": (x.specific if x.kind == "tool" else None)})
     open("eval/sheet.md", "w", encoding="utf8").write("\n".join(sheet))
     json.dump(key, open("eval/labels.json", "w"), indent=1)
     print(f"Sampled {len(key)} of {len(items)} evidence items -> eval/sheet.md, eval/labels.json")
@@ -99,7 +102,7 @@ def main():
     r = sub.add_parser("report"); r.add_argument("--min-score", type=int, default=40)
     r.add_argument("--slack", action="store_true"); r.set_defaults(fn=cmd_report)
     s = sub.add_parser("sample"); s.add_argument("--n", type=int, default=40)
-    s.add_argument("--seed", type=int, default=7); s.set_defaults(fn=cmd_sample)
+    s.add_argument("--seed", type=int, default=7); s.add_argument("--exclude"); s.set_defaults(fn=cmd_sample)
     l = sub.add_parser("score-labels"); l.set_defaults(fn=lambda a: print(evaluate.score()))
     a = p.parse_args(); a.fn(a)
 

@@ -75,21 +75,28 @@ posting means candidates should know it. It does not prove the company runs it.
 
 ## Accuracy
 
-I labelled a random sample of 40 flagged items from the first version of the rules, reading each
-posting. This was one labeller (me, with AI help), so spot-check `eval/sheet.md`.
+I read each flagged posting and labelled it. One labeller (me, with AI help), so spot-check `eval/sheet*.md`.
 
-| Check | Result |
-|---|---|
-| Extraction correct, all signals | 35/40 = 88% (95% range 74-95%) |
-| Comp-role titles | 5/5 |
-| Tool mentions that point to a specific platform | 9/25 = 36% (95% range 20-55%) |
+| Check | Sample 1: 40 random items, first rules | Sample 2: 24 remaining items, later rules |
+|---|---|---|
+| Extraction correct, all signals | 35/40 = 88% (95% range 74-95%) | 22/24 = 92% (74-98%) |
+| Comp-role titles | 5/5 | 7/7 |
+| Commission-duty wording | 5/7 | 1/3 |
+| Tool mentions pointing to a specific platform | 9/25 = 36% (20-55%) | 2/14 = 14% (4-40%) |
+| "Specific vs listed" flag matches my reading | not built yet | 13/14 = 93% (69-99%) |
 
-The last row drove a design change: most tool mentions are lists of acceptable experience, so the
-scoring now separates "specific" from "listed". Those fixes were tuned on the same 40 items, so the
-88% describes the earlier rules. Measure again on a fresh sample before relying on the new ones:
+What this showed:
+- Most platform mentions are lists of acceptable experience ("such as A, B or C"), so the scoring separates
+  "specific" from "listed" and tells the rep to ask, not assume.
+- Commission-duty wording was the weakest signal. Both errors in sample 2 were accounting or pay-benchmarking
+  roles, so I tightened that rule and added tests.
+
+Limits of these numbers: sample 2 is not a random draw. It is everything left after excluding sample 1 and
+duplicate postings. Both fixes were made after seeing these samples, so the current rules have not been measured
+on independent data. To do that, collect again later and label a new sample:
 
 ```
-.venv/bin/python -m compsignal sample --n 40 --seed 11   # then fill eval/labels.json
+.venv/bin/python -m compsignal sample --n 40 --seed 11 --exclude eval/labels.json   # then fill eval/labels.json
 .venv/bin/python -m compsignal score-labels
 ```
 

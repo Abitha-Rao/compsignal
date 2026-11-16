@@ -1,0 +1,389 @@
+[
+ {
+  "n": 1,
+  "company": "okta",
+  "kind": "comp_role_title",
+  "detail": "Commissions Manager",
+  "url": "https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 2,
+  "company": "elastic",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://jobs.elastic.co/jobs?gh_jid=8237466&gh_jid=8237466",
+  "label": 1,
+  "specific": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 3,
+  "company": "launchdarkly",
+  "kind": "excel_commission",
+  "detail": "spreadsheet + commissions",
+  "url": "https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003",
+  "label": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 4,
+  "company": "nerdwallet",
+  "kind": "comp_duty",
+  "detail": "processing, investigate commission",
+  "url": "https://jobs.ashbyhq.com/nerdwallet/643130af-4086-48c3-a5ae-527120dd6757",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 5,
+  "company": "okta",
+  "kind": "comp_role_title",
+  "detail": "GTM Compensation",
+  "url": "https://www.okta.com/company/careers/opportunity/8132596?gh_jid=8132596",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 6,
+  "company": "elastic",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://jobs.elastic.co/jobs?gh_jid=8303741&gh_jid=8303741",
+  "label": 1,
+  "specific": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 7,
+  "company": "collibra",
+  "kind": "tool",
+  "detail": "CaptivateIQ",
+  "url": "https://www.collibra.com/us/en/company/careers/job-listing/?gh_jid=8161785",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 8,
+  "company": "clickup",
+  "kind": "tool",
+  "detail": "Spiff",
+  "url": "https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 9,
+  "company": "samsara",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://www.samsara.com/company/careers/roles/8353662?gh_jid=8353662",
+  "label": 1,
+  "specific": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 10,
+  "company": "6sense",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://boards.greenhouse.io/6sense/jobs/8327145?gh_jid=8327145",
+  "label": 0,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 11,
+  "company": "zocdoc",
+  "kind": "tool",
+  "detail": "Varicent",
+  "url": "https://job-boards.greenhouse.io/zocdoc/jobs/8346400",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 12,
+  "company": "attentive",
+  "kind": "tool",
+  "detail": "CaptivateIQ",
+  "url": "https://job-boards.greenhouse.io/attentive/jobs/4452679009",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 13,
+  "company": "pagerduty",
+  "kind": "tool",
+  "detail": "Spiff",
+  "url": "https://job-boards.greenhouse.io/pagerduty/jobs/5835317004",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 14,
+  "company": "launchdarkly",
+  "kind": "comp_role_title",
+  "detail": "Commissions Analyst",
+  "url": "https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 15,
+  "company": "stripe",
+  "kind": "tool",
+  "detail": "Varicent",
+  "url": "https://stripe.com/jobs/search?gh_jid=7862938",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 16,
+  "company": "fivetran",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://www.fivetran.com/careers/job?gh_jid=8198219003",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 17,
+  "company": "pagerduty",
+  "kind": "tool",
+  "detail": "CaptivateIQ",
+  "url": "https://job-boards.greenhouse.io/pagerduty/jobs/5835317004",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 18,
+  "company": "okta",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512",
+  "label": 1,
+  "specific": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 19,
+  "company": "pagerduty",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://job-boards.greenhouse.io/pagerduty/jobs/5835317004",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 20,
+  "company": "clickup",
+  "kind": "tool",
+  "detail": "CaptivateIQ",
+  "url": "https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 21,
+  "company": "benchling",
+  "kind": "comp_duty",
+  "detail": "processes. - Review commission",
+  "url": "https://jobs.ashbyhq.com/benchling/3b262872-9816-4160-b11e-c8082178943e",
+  "label": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 22,
+  "company": "brex",
+  "kind": "comp_duty",
+  "detail": "owning incentive compensation",
+  "url": "https://www.brex.com/careers/8865089002?gh_jid=8865089002",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 23,
+  "company": "brex",
+  "kind": "comp_duty",
+  "detail": "owning incentive compensation",
+  "url": "https://www.brex.com/careers/8716945002?gh_jid=8716945002",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 24,
+  "company": "clickup",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 25,
+  "company": "elastic",
+  "kind": "comp_role_title",
+  "detail": "Sales Compensation",
+  "url": "https://jobs.elastic.co/jobs?gh_jid=8303741&gh_jid=8303741",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 26,
+  "company": "purestorage",
+  "kind": "tool",
+  "detail": "Callidus",
+  "url": "https://job-boards.greenhouse.io/purestorage/jobs/8139654",
+  "label": 1,
+  "specific": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 27,
+  "company": "fivetran",
+  "kind": "comp_role_title",
+  "detail": "Sales Compensation",
+  "url": "https://www.fivetran.com/careers/job?gh_jid=8198219003",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 28,
+  "company": "brex",
+  "kind": "comp_duty",
+  "detail": "owning incentive compensation",
+  "url": "https://www.brex.com/careers/8716927002?gh_jid=8716927002",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 29,
+  "company": "attentive",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://job-boards.greenhouse.io/attentive/jobs/4452679009",
+  "label": 1,
+  "specific": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 30,
+  "company": "rubrik",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://www.rubrik.com/company/careers/departments/job.8222564?gh_jid=8222564",
+  "label": 1,
+  "specific": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 31,
+  "company": "6sense",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://boards.greenhouse.io/6sense/jobs/8164298?gh_jid=8164298",
+  "label": 0,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 32,
+  "company": "attentive",
+  "kind": "tool",
+  "detail": "Spiff",
+  "url": "https://job-boards.greenhouse.io/attentive/jobs/4452679009",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 33,
+  "company": "mongodb",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://www.mongodb.com/careers/job/?gh_jid=8121701",
+  "label": 1,
+  "specific": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 34,
+  "company": "vercel",
+  "kind": "comp_duty",
+  "detail": "processes, including equity and commission",
+  "url": "https://job-boards.greenhouse.io/vercel/jobs/6221327004",
+  "label": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 35,
+  "company": "zocdoc",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://job-boards.greenhouse.io/zocdoc/jobs/8346400",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 36,
+  "company": "stripe",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://stripe.com/jobs/search?gh_jid=7862938",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 37,
+  "company": "collibra",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://www.collibra.com/us/en/company/careers/job-listing/?gh_jid=8161785",
+  "label": 1,
+  "specific": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 38,
+  "company": "zocdoc",
+  "kind": "tool",
+  "detail": "Spiff",
+  "url": "https://job-boards.greenhouse.io/zocdoc/jobs/8346400",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 39,
+  "company": "brex",
+  "kind": "comp_duty",
+  "detail": "owning incentive compensation",
+  "url": "https://www.brex.com/careers/8865086002?gh_jid=8865086002",
+  "label": 1,
+  "labeller": "Claude (needs human spot-check)"
+ },
+ {
+  "n": 40,
+  "company": "grafanalabs",
+  "kind": "tool",
+  "detail": "Xactly",
+  "url": "https://job-boards.greenhouse.io/grafanalabs/jobs/6221389004",
+  "label": 1,
+  "specific": 0,
+  "labeller": "Claude (needs human spot-check)"
+ }
+]

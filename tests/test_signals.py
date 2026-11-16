@@ -53,3 +53,16 @@ def test_single_platform_is_specific_and_list_is_not():
 def test_vendor_named_as_customer_in_unrelated_posting_is_ignored():
     s = analyze_job(job("Business Development Representative", "delivering predictions for enterprises like Cisco and Xactly. Trust you to evangelize"))
     assert s == []
+
+def test_commission_accounting_is_not_commission_operations():
+    s = analyze_job(job("Manager, Corporate Accounting", "Own deferred commission accounting under ASC 340-40, including capitalization"))
+    assert not any(x.kind == "comp_duty" for x in s)
+
+def test_pay_benchmarking_cycle_is_not_commission_operations():
+    s = analyze_job(job("Senior Compensation Manager, Sales", "Own Sales compensation-cycle execution end-to-end, including market benchmarking"))
+    assert not any(x.kind == "comp_duty" for x in s)
+
+def test_real_commission_duties_still_detected():
+    a = analyze_job(job("Revenue Operations Analyst", "Support recurring sales compensation processes, including payout validation"))
+    b = analyze_job(job("Director, Revenue Operations", "Direct experience owning incentive compensation design for AE and SDR organizations"))
+    assert any(x.kind == "comp_duty" for x in a) and any(x.kind == "comp_duty" for x in b)

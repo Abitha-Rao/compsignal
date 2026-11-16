@@ -1,159 +1,95 @@
-1. [okta] comp_role_title/Commissions Manager - Senior Commissions Manager 
-   "Senior Commissions Manager "
-   https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512
+1. [notion] tool/Everstage - GTM Compensation Lead, Commercial Operations
+   "...identify data discrepancies, and build tools or workflows that make teams more self-serve. - Familiarity with Everstage a plus! Notion is committed to providing highly competitive cash compensation, equity, and benefits. The comp..."
+   https://jobs.ashbyhq.com/notion/be994bb4-c680-4f57-b3bd-7e689175317f
 
-2. [elastic] tool/Xactly - Sr. Application Engineer - Xactly
-   "...ou'll be instrumental in developing and implementing solutions that help us meet our business objectives with Xactly. We’re seeking a candidate who possesses strong technical expertise and enjoys working collaboratively, contr..."
-   https://jobs.elastic.co/jobs?gh_jid=8237466&gh_jid=8237466
+2. [zocdoc] comp_role_title/Commissions Manager - Commissions Manager 
+   "Commissions Manager "
+   https://job-boards.greenhouse.io/zocdoc/jobs/8346400
 
-3. [launchdarkly] excel_commission/spreadsheet + commissions - Sales Commissions Analyst
-   "...epancies, support quota and plan administration, and deliver ad hoc reporting. We’re looking for someone with commission experience, strong spreadsheet skills, curiosity, and attention to detail who will improve how work gets done—automating manual processes an..."
+3. [zocdoc] tool/CaptivateIQ - Commissions Manager 
+   "...ncluding requirements, configuration, data validation, testing and rollout. Experience with platforms such as CaptivateIQ, Spiff, Varicent or Xactly is preferred. Advanced Excel or Google Sheets skills and confidence investigating..."
+   https://job-boards.greenhouse.io/zocdoc/jobs/8346400
+
+4. [launchdarkly] tool/Everstage - Sales Commissions Analyst
+   "...rred, or equivalent experience Experience with a commissions platform such as QuotaPath, Xactly, CaptivateIQ, Everstage or similar, and familiarity with Salesforce or related business systems Highly proficient Excel and Google Sh..."
    https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003
 
-4. [nerdwallet] comp_duty/processing, investigate commission - Associate Manager, Sales Operations - NY
-   "...with approved compensation plans. Partner with Finance, Accounting, and Payroll to ensure accurate and timely processing, investigate commission discrepancies, and resolve disputes while maintaining appropriate documentation and audit controls. - Oversee..."
-   https://jobs.ashbyhq.com/nerdwallet/643130af-4086-48c3-a5ae-527120dd6757
+5. [tebra] comp_duty/processes, including payout validation, commission - Revenue Operations Analyst
+   "...d-hoc and deep-dive analysis to identify trends, risks, and root causes. Support recurring sales compensation processes, including payout validation, commission reporting and reconciliation, quota management, attainment reporting, forecasting, and special incentive admi..."
+   https://job-boards.greenhouse.io/tebra/jobs/4739712005
 
-5. [okta] comp_role_title/GTM Compensation - Senior Manager, GTM Compensation Strategy & Incentive Design
-   "Senior Manager, GTM Compensation Strategy & Incentive Design"
+6. [okta] tool/Xactly - Sr. Product Analyst (Xactly)
+   "...n both day-to-day operations and long-term strategic growth   Join the TDI Commissions team that supports the Xactly platform across Incent, Connect, Extend, and other Okta-enabled modules. We work with GTM Ops and Commissions..."
+   https://www.okta.com/company/careers/opportunity/8335959?gh_jid=8335959
+
+7. [launchdarkly] tool/CaptivateIQ - Sales Commissions Analyst
+   "...d field preferred, or equivalent experience Experience with a commissions platform such as QuotaPath, Xactly, CaptivateIQ, Everstage or similar, and familiarity with Salesforce or related business systems Highly proficient Excel an..."
+   https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003
+
+8. [collibra] tool/Spiff - Senior Sales Compensation Analyst
+   "...reconciliation plus hands-on administration of an enterprise ICM platform (Xactly, CaptivateIQ, Varicent, or Spiff) Experience managing a compensation inquiry and dispute queue with defined SLAs and structured exception hand..."
+   https://www.collibra.com/us/en/company/careers/job-listing/?gh_jid=8161785
+
+9. [mongodb] comp_duty/Own Sales compensation - Senior Compensation Manager, Sales
+   "...d partner with the teams that design them to assess effectiveness and support informed compensation decisions Own Sales compensation-cycle execution end-to-end, including market benchmarking, budget modeling, manager enablement, and leadershi..."
+   https://www.mongodb.com/careers/job/?gh_jid=8208271
+
+10. [okta] tool/Xactly - Senior Manager, GTM Compensation Strategy & Incentive Design
+   "..., and compensation plan mechanics that drive business outcomes Advanced proficiency with Salesforce, Anaplan, Xactly, or comparable incentive compensation management platforms, with the ability to optimize systems for accuracy..."
    https://www.okta.com/company/careers/opportunity/8132596?gh_jid=8132596
 
-6. [elastic] tool/Xactly - Principal Analyst, Sales Compensation Systems & Administration
-   "...hly and quarterly close cycles for accruals, payments and general system updates in our Sales Incentive tool, Xactly Incent Responsible for SOX reviews, compliance and driving continuous improvement Find opportunities for syst..."
-   https://jobs.elastic.co/jobs?gh_jid=8303741&gh_jid=8303741
-
-7. [collibra] tool/CaptivateIQ - Senior Sales Compensation Analyst
-   "...l submission, and variance reconciliation plus hands-on administration of an enterprise ICM platform (Xactly, CaptivateIQ, Varicent, or Spiff) Experience managing a compensation inquiry and dispute queue with defined SLAs and struc..."
-   https://www.collibra.com/us/en/company/careers/job-listing/?gh_jid=8161785
-
-8. [clickup] tool/Spiff - Senior Sales Compensation Manager
-   "...Operations, and Payroll teams. Desirable - Experience with a sales compensation platform such as CaptivateIQ, Spiff, Xactly, or a similar system. - Familiarity with Salesforce or another CRM, sales quota and attainment data,..."
-   https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9
-
-9. [samsara] tool/Xactly - Business SOX Compliance Manager
-   "...red) An ideal candidate also has: Experience with financial systems such as Netsuite, Salesforce, Workday and Xactly  Experience using automation or AI tools to make compliance work faster, more reliable, and SOX compliant  Ex..."
-   https://www.samsara.com/company/careers/roles/8353662?gh_jid=8353662
-
-10. [6sense] tool/Xactly - Business Development Representative - Enterprise
-   "...we build upon the success we’ve had delivering predictions for enterprises like Cisco, Lenovo, BlueJeans, and Xactly. We will trust you to evangelize 6sense, open doors into opportunities, and consistently exceed targets.  Thi..."
-   https://boards.greenhouse.io/6sense/jobs/8327145?gh_jid=8327145
-
-11. [zocdoc] tool/Varicent - Commissions Manager 
-   "...s, configuration, data validation, testing and rollout. Experience with platforms such as CaptivateIQ, Spiff, Varicent or Xactly is preferred. Advanced Excel or Google Sheets skills and confidence investigating CRM and operation..."
-   https://job-boards.greenhouse.io/zocdoc/jobs/8346400
-
-12. [attentive] tool/CaptivateIQ - Director, Incentive Compensation
-   "...lans Direct experience with commission management platforms (Xactly preferred, or equivalent SPM systems like CaptivateIQ, Spiff). You'll get competitive  perks and benefits , from health & wellness to equity, to help you bring you..."
-   https://job-boards.greenhouse.io/attentive/jobs/4452679009
-
-13. [pagerduty] tool/Spiff - Sales Strategy and Operations Manager
-   "...orecasting tools (e.g., Clari, Gong) and Incentive Compensation Management (ICM) software (e.g., CaptivateIQ, Spiff, Xactly) is a strong plus. Data visualization experience (Tableau, Looker, or PowerBI) is highly preferred. S..."
-   https://job-boards.greenhouse.io/pagerduty/jobs/5835317004
-
-14. [launchdarkly] comp_role_title/Commissions Analyst - Sales Commissions Analyst
-   "Sales Commissions Analyst"
+11. [launchdarkly] tool/Xactly - Sales Commissions Analyst
+   "...a related field preferred, or equivalent experience Experience with a commissions platform such as QuotaPath, Xactly, CaptivateIQ, Everstage or similar, and familiarity with Salesforce or related business systems Highly profic..."
    https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003
 
-15. [stripe] tool/Varicent - Sales Compensation Design Lead
-   "...tionship Management (CRM) (e.g., Salesforce) and Incentive Compensation Management (ICM) (e.g., Captivate IQ, Varicent, Xactly) tools Experience with reporting tools and Tableau Strong logic, problem-solving, and Excel modeling..."
-   https://stripe.com/jobs/search?gh_jid=7862938
+12. [launchdarkly] tool/QuotaPath - Sales Commissions Analyst
+   "...nomics, or a related field preferred, or equivalent experience Experience with a commissions platform such as QuotaPath, Xactly, CaptivateIQ, Everstage or similar, and familiarity with Salesforce or related business systems Highl..."
+   https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003
 
-16. [fivetran] tool/Xactly - Sales Compensation Manager Systems and Analytics
-   "...stems Ownership: Own the configuration, administration, and roadmap of our sales compensation platform (e.g., Xactly, CaptivateIQ, Varicent, or similar), including plan builds, crediting rules, quota and territory loads, and i..."
-   https://www.fivetran.com/careers/job?gh_jid=8198219003
+13. [notion] comp_role_title/GTM Compensation - GTM Compensation Lead, Commercial Operations
+   "GTM Compensation Lead, Commercial Operations"
+   https://jobs.ashbyhq.com/notion/be994bb4-c680-4f57-b3bd-7e689175317f
 
-17. [pagerduty] tool/CaptivateIQ - Sales Strategy and Operations Manager
-   "...rience with Forecasting tools (e.g., Clari, Gong) and Incentive Compensation Management (ICM) software (e.g., CaptivateIQ, Spiff, Xactly) is a strong plus. Data visualization experience (Tableau, Looker, or PowerBI) is highly prefe..."
-   https://job-boards.greenhouse.io/pagerduty/jobs/5835317004
-
-18. [okta] tool/Xactly - Senior Commissions Manager 
-   "...zero error margins. Operationalize data reconciliations between upstream source systems (CRM and Workday) and Xactly Incent, optimizing workflows to safeguard data integrity, maintain accurate crediting rules, and ensure calcu..."
-   https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512
-
-19. [pagerduty] tool/Xactly - Sales Strategy and Operations Manager
-   "...ing tools (e.g., Clari, Gong) and Incentive Compensation Management (ICM) software (e.g., CaptivateIQ, Spiff, Xactly) is a strong plus. Data visualization experience (Tableau, Looker, or PowerBI) is highly preferred. Strong da..."
-   https://job-boards.greenhouse.io/pagerduty/jobs/5835317004
-
-20. [clickup] tool/CaptivateIQ - Senior Sales Compensation Manager
-   "...les, Revenue Operations, and Payroll teams. Desirable - Experience with a sales compensation platform such as CaptivateIQ, Spiff, Xactly, or a similar system. - Familiarity with Salesforce or another CRM, sales quota and attainment..."
-   https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9
-
-21. [benchling] comp_duty/processes. - Review commission - Corporate Accounting Manager
-   "...lose process end to end in partnership with Payroll and HR, and drive operational efficiencies in the related processes. - Review commission, bonus, sign-on, and retention accounting, including accruals, prepaid and deferred balances, and rollforward..."
-   https://jobs.ashbyhq.com/benchling/3b262872-9816-4160-b11e-c8082178943e
-
-22. [brex] comp_duty/owning incentive compensation - Director, Revenue Operations
-   "...d success operating in a complex cross functional environment to deliver impactful outcomes Direct experience owning incentive compensation design and coverage models for AE and SDR organizations at scale Strong problem solving skills and collaborat..."
-   https://www.brex.com/careers/8865089002?gh_jid=8865089002
-
-23. [brex] comp_duty/owning incentive compensation - Director, Revenue Operations
-   "...d success operating in a complex cross functional environment to deliver impactful outcomes Direct experience owning incentive compensation design and coverage models for AE and SDR organizations at scale Strong problem solving skills and collaborat..."
-   https://www.brex.com/careers/8716945002?gh_jid=8716945002
-
-24. [clickup] tool/Xactly - Senior Sales Compensation Manager
-   "...ons, and Payroll teams. Desirable - Experience with a sales compensation platform such as CaptivateIQ, Spiff, Xactly, or a similar system. - Familiarity with Salesforce or another CRM, sales quota and attainment data, or quota..."
-   https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9
-
-25. [elastic] comp_role_title/Sales Compensation - Principal Analyst, Sales Compensation Systems & Administration
-   "Principal Analyst, Sales Compensation Systems & Administration"
-   https://jobs.elastic.co/jobs?gh_jid=8303741&gh_jid=8303741
-
-26. [purestorage] tool/Callidus - FP&A Finance Manager
-   "...ata analytics automation for the team. Strong systems experience with Tableau, Salesforce, Anaplan, NetSuite, Callidus , or similar systems and tools. Demonstrated ability to understand the story behind the numbers and translate..."
-   https://job-boards.greenhouse.io/purestorage/jobs/8139654
-
-27. [fivetran] comp_role_title/Sales Compensation - Sales Compensation Manager Systems and Analytics
-   "Sales Compensation Manager Systems and Analytics"
-   https://www.fivetran.com/careers/job?gh_jid=8198219003
-
-28. [brex] comp_duty/owning incentive compensation - Director, Revenue Operations
-   "...d success operating in a complex cross functional environment to deliver impactful outcomes Direct experience owning incentive compensation design and coverage models for AE and SDR organizations at scale Strong problem solving skills and collaborat..."
-   https://www.brex.com/careers/8716927002?gh_jid=8716927002
-
-29. [attentive] tool/Xactly - Director, Incentive Compensation
-   "...argin-based incentives, expansion and retention plans Direct experience with commission management platforms (Xactly preferred, or equivalent SPM systems like CaptivateIQ, Spiff). You'll get competitive  perks and benefits , f..."
-   https://job-boards.greenhouse.io/attentive/jobs/4452679009
-
-30. [rubrik] tool/Xactly - Senior Technical Program Manager - IT GTM 
-   "...to, Adobe Experience Manager, campaign and lead lifecycle) Sales performance management and commissions (i.e. Xactly Incent) Partner portals and enablement tools Revenue, Procure-to-Pay Ensure solutions are designed with scala..."
-   https://www.rubrik.com/company/careers/departments/job.8222564?gh_jid=8222564
-
-31. [6sense] tool/Xactly - Business Development Representative
-   "...we build upon the success we’ve had delivering predictions for enterprises like Cisco, Lenovo, BlueJeans, and Xactly. We will trust you to evangelize 6sense, open doors into opportunities, and consistently exceed targets.  Thi..."
-   https://boards.greenhouse.io/6sense/jobs/8164298?gh_jid=8164298
-
-32. [attentive] tool/Spiff - Director, Incentive Compensation
-   "...xperience with commission management platforms (Xactly preferred, or equivalent SPM systems like CaptivateIQ, Spiff). You'll get competitive  perks and benefits , from health & wellness to equity, to help you bring your best..."
-   https://job-boards.greenhouse.io/attentive/jobs/4452679009
-
-33. [mongodb] tool/Xactly - Senior Sales Compensation Engineer
-   "...rking model. Responsibilities: Act as an organizational subject matter expert for commissions processing, the Xactly product suite, and individual commission plan components as they operate in the solution Gathering and docume..."
-   https://www.mongodb.com/careers/job/?gh_jid=8121701
-
-34. [vercel] comp_duty/processes, including equity and commission - People Systems Manager, Workday
-   "...y changes affect downstream systems Bonus if you Have experience with Workday Payroll or complex compensation processes, including equity and commission payments Have helped a high-growth technology company scale its People Systems infrastructure or prepare for..."
-   https://job-boards.greenhouse.io/vercel/jobs/6221327004
-
-35. [zocdoc] tool/Xactly - Commissions Manager 
-   "...tion, data validation, testing and rollout. Experience with platforms such as CaptivateIQ, Spiff, Varicent or Xactly is preferred. Advanced Excel or Google Sheets skills and confidence investigating CRM and operational data. E..."
-   https://job-boards.greenhouse.io/zocdoc/jobs/8346400
-
-36. [stripe] tool/Xactly - Sales Compensation Design Lead
-   "...anagement (CRM) (e.g., Salesforce) and Incentive Compensation Management (ICM) (e.g., Captivate IQ, Varicent, Xactly) tools Experience with reporting tools and Tableau Strong logic, problem-solving, and Excel modeling skills V..."
-   https://stripe.com/jobs/search?gh_jid=7862938
-
-37. [collibra] tool/Xactly - Senior Sales Compensation Analyst
-   "...he Senior Manager, Sales Compensation  you will be the hands-on owner of sales comp operations, plan logic in Xactly, monthly close, dispute resolution, and the annual plan cycle. Because every seller sees the output of this w..."
+14. [collibra] comp_role_title/Sales Compensation - Senior Sales Compensation Analyst
+   "Senior Sales Compensation Analyst"
    https://www.collibra.com/us/en/company/careers/job-listing/?gh_jid=8161785
 
-38. [zocdoc] tool/Spiff - Commissions Manager 
-   "...irements, configuration, data validation, testing and rollout. Experience with platforms such as CaptivateIQ, Spiff, Varicent or Xactly is preferred. Advanced Excel or Google Sheets skills and confidence investigating CRM and..."
-   https://job-boards.greenhouse.io/zocdoc/jobs/8346400
+15. [collibra] tool/Varicent - Senior Sales Compensation Analyst
+   "...and variance reconciliation plus hands-on administration of an enterprise ICM platform (Xactly, CaptivateIQ, Varicent, or Spiff) Experience managing a compensation inquiry and dispute queue with defined SLAs and structured exce..."
+   https://www.collibra.com/us/en/company/careers/job-listing/?gh_jid=8161785
 
-39. [brex] comp_duty/owning incentive compensation - Director, Revenue Operations
-   "...d success operating in a complex cross functional environment to deliver impactful outcomes Direct experience owning incentive compensation design and coverage models for AE and SDR organizations at scale Strong problem solving skills and collaborat..."
-   https://www.brex.com/careers/8865086002?gh_jid=8865086002
+16. [clickup] comp_role_title/Sales Compensation - Senior Sales Compensation Manager
+   "Senior Sales Compensation Manager"
+   https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9
 
-40. [grafanalabs] tool/Xactly - Sales Operations Manager | United States | Remote
-   "...e with Salesforce reporting, dashboards, validation rules, and flows. Experience with compensation tools like Xactly, Apttus, or CaptivateIQ Bonus Points For: Previous experience in open source  Experience with data visualizat..."
+17. [mongodb] comp_role_title/Sales Compensation - Senior Sales Compensation Engineer
+   "Senior Sales Compensation Engineer"
+   https://www.mongodb.com/careers/job/?gh_jid=8121701
+
+18. [mongodb] tool/Varicent - Senior Sales Compensation Engineer
+   "...ence with the Xactly product suite or competitive product suites highly desirable (ie, SAP CallidusCloud, IBM Varicent, Anaplan, Optymyze, Pigment) Experience with design and maintain planning models in Anaplan or Pigment(Prefer..."
+   https://www.mongodb.com/careers/job/?gh_jid=8121701
+
+19. [stripe] comp_role_title/Sales Compensation - Sales Compensation Design Lead
+   "Sales Compensation Design Lead"
+   https://stripe.com/jobs/search?gh_jid=7862938
+
+20. [fivetran] tool/CaptivateIQ - Sales Compensation Manager Systems and Analytics
+   "...nership: Own the configuration, administration, and roadmap of our sales compensation platform (e.g., Xactly, CaptivateIQ, Varicent, or similar), including plan builds, crediting rules, quota and territory loads, and integrations w..."
+   https://www.fivetran.com/careers/job?gh_jid=8198219003
+
+21. [cohere] comp_duty/Own deferred commission - Manager, Corporate Accounting
+   "...stock-based compensation under ASC 718 and IFRS, as well as all other equity-related balance sheet accounts - Own deferred commission accounting under ASC 340-40, including capitalization, amortization, and reconciliation of contract acquisiti..."
+   https://jobs.ashbyhq.com/cohere/77885bc2-a88a-421b-a2d6-ae209a8fa758
+
+22. [grafanalabs] tool/CaptivateIQ - Sales Operations Manager | United States | Remote
+   "...eporting, dashboards, validation rules, and flows. Experience with compensation tools like Xactly, Apttus, or CaptivateIQ Bonus Points For: Previous experience in open source  Experience with data visualization tools like Tableau o..."
    https://job-boards.greenhouse.io/grafanalabs/jobs/6221389004
+
+23. [fivetran] tool/Varicent - Sales Compensation Manager Systems and Analytics
+   "...the configuration, administration, and roadmap of our sales compensation platform (e.g., Xactly, CaptivateIQ, Varicent, or similar), including plan builds, crediting rules, quota and territory loads, and integrations with Salesf..."
+   https://www.fivetran.com/careers/job?gh_jid=8198219003
+
+24. [attentive] comp_role_title/Incentive Compensation - Director, Incentive Compensation
+   "Director, Incentive Compensation"
+   https://job-boards.greenhouse.io/attentive/jobs/4452679009

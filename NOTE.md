@@ -12,9 +12,9 @@ operation is in motion: an open Commissions Manager role, a posting that names o
 commission work tied to spreadsheets. Each brief links its evidence so the rep can disagree. Scoring is rule-based,
 with no AI judgement, so any number can be challenged.
 
-Testing it taught me something. Of 150 reachable companies, 14 had a strict signal. In a labelled sample of 40
-flags, 88% were extracted correctly (range 74 to 95%), but only 36% of platform mentions pointed to a platform the
-company actually runs. Most were "experience with A, B or C" lists, so I split "specific" from "listed".
+Testing it taught me something. Of 150 reachable companies, 14 had a strict signal. In two labelled samples
+(40 and 24 flags), 88% and 92% were extracted correctly, but only 36% and 14% of platform mentions pointed to a
+platform the company actually runs. Most were "experience with A, B or C" lists, so I split "specific" from "listed".
 
 **How I would know it worked**
 1. At least 80% of flagged evidence confirmed on a fresh labelled sample each month.

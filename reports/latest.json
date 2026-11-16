@@ -1,5 +1,14 @@
 [
  {
+  "company": "okta",
+  "comp_activity": 60,
+  "incumbent_signal": "specific",
+  "tools": [
+   "Xactly"
+  ],
+  "n_signals": 6
+ },
+ {
   "company": "launchdarkly",
   "comp_activity": 60,
   "incumbent_signal": "listed",
@@ -10,24 +19,6 @@
    "Xactly"
   ],
   "n_signals": 6
- },
- {
-  "company": "mongodb",
-  "comp_activity": 50,
-  "incumbent_signal": "specific",
-  "tools": [
-   "Xactly"
-  ],
-  "n_signals": 4
- },
- {
-  "company": "okta",
-  "comp_activity": 50,
-  "incumbent_signal": "specific",
-  "tools": [
-   "Xactly"
-  ],
-  "n_signals": 5
  },
  {
   "company": "collibra",
@@ -46,6 +37,15 @@
    "Xactly"
   ],
   "n_signals": 2
+ },
+ {
+  "company": "mongodb",
+  "comp_activity": 40,
+  "incumbent_signal": "specific",
+  "tools": [
+   "Xactly"
+  ],
+  "n_signals": 3
  },
  {
   "company": "notion",
@@ -113,12 +113,12 @@
  },
  {
   "company": "rubrik",
-  "comp_activity": 0,
+  "comp_activity": 10,
   "incumbent_signal": "specific",
   "tools": [
    "Xactly"
   ],
-  "n_signals": 1
+  "n_signals": 2
  },
  {
   "company": "grafanalabs",
