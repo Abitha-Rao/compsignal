@@ -1,0 +1,37 @@
+{
+  "name": "CompSignal weekly",
+  "nodes": [
+    {
+      "parameters": {"rule": {"interval": [{"field": "weeks", "weeksInterval": 1, "triggerAtDay": [1], "triggerAtHour": 8}]}},
+      "id": "a1", "name": "Every Monday 8am", "type": "n8n-nodes-base.scheduleTrigger", "typeVersion": 1.2, "position": [0, 0]
+    },
+    {
+      "parameters": {"command": "cd /Users/YOU/Documents/compsignal && .venv/bin/python -m compsignal collect && .venv/bin/python -m compsignal report"},
+      "id": "a2", "name": "Collect and report", "type": "n8n-nodes-base.executeCommand", "typeVersion": 1, "position": [240, 0]
+    },
+    {
+      "parameters": {"operation": "read", "fileSelector": "/Users/YOU/Documents/compsignal/reports/latest.json"},
+      "id": "a3", "name": "Read latest.json", "type": "n8n-nodes-base.readWriteFile", "typeVersion": 1, "position": [480, 0]
+    },
+    {
+      "parameters": {"operation": "fromJson", "options": {}},
+      "id": "a4", "name": "Parse JSON", "type": "n8n-nodes-base.extractFromFile", "typeVersion": 1, "position": [720, 0]
+    },
+    {
+      "parameters": {"jsCode": "const rows = ($input.first().json.data || []).slice(0, 10);\nconst lines = rows.map(r => `- *${r.company}* comp ${r.comp_activity}/100, tools: ${r.incumbent_signal} ${r.tools.join(', ')}`);\nreturn [{ json: { text: `*CompSignal weekly: top ${rows.length} accounts*\\n` + lines.join('\\n') } }];"},
+      "id": "a5", "name": "Format message", "type": "n8n-nodes-base.code", "typeVersion": 2, "position": [960, 0]
+    },
+    {
+      "parameters": {"method": "POST", "url": "={{ $env.SLACK_WEBHOOK_URL }}", "sendBody": true, "specifyBody": "json", "jsonBody": "={{ JSON.stringify({ text: $json.text }) }}"},
+      "id": "a6", "name": "Post to Slack", "type": "n8n-nodes-base.httpRequest", "typeVersion": 4.2, "position": [1200, 0]
+    }
+  ],
+  "connections": {
+    "Every Monday 8am": {"main": [[{"node": "Collect and report", "type": "main", "index": 0}]]},
+    "Collect and report": {"main": [[{"node": "Read latest.json", "type": "main", "index": 0}]]},
+    "Read latest.json": {"main": [[{"node": "Parse JSON", "type": "main", "index": 0}]]},
+    "Parse JSON": {"main": [[{"node": "Format message", "type": "main", "index": 0}]]},
+    "Format message": {"main": [[{"node": "Post to Slack", "type": "main", "index": 0}]]}
+  },
+  "settings": {"executionOrder": "v1"}
+}

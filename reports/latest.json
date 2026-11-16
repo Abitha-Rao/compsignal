@@ -1,0 +1,144 @@
+[
+ {
+  "company": "launchdarkly",
+  "comp_activity": 60,
+  "incumbent_signal": "listed",
+  "tools": [
+   "CaptivateIQ",
+   "Everstage",
+   "QuotaPath",
+   "Xactly"
+  ],
+  "n_signals": 6
+ },
+ {
+  "company": "mongodb",
+  "comp_activity": 50,
+  "incumbent_signal": "specific",
+  "tools": [
+   "Xactly"
+  ],
+  "n_signals": 4
+ },
+ {
+  "company": "okta",
+  "comp_activity": 50,
+  "incumbent_signal": "specific",
+  "tools": [
+   "Xactly"
+  ],
+  "n_signals": 5
+ },
+ {
+  "company": "collibra",
+  "comp_activity": 40,
+  "incumbent_signal": "specific",
+  "tools": [
+   "Xactly"
+  ],
+  "n_signals": 5
+ },
+ {
+  "company": "elastic",
+  "comp_activity": 40,
+  "incumbent_signal": "specific",
+  "tools": [
+   "Xactly"
+  ],
+  "n_signals": 2
+ },
+ {
+  "company": "notion",
+  "comp_activity": 40,
+  "incumbent_signal": "specific",
+  "tools": [
+   "Everstage"
+  ],
+  "n_signals": 2
+ },
+ {
+  "company": "attentive",
+  "comp_activity": 40,
+  "incumbent_signal": "listed",
+  "tools": [
+   "CaptivateIQ",
+   "Spiff",
+   "Xactly"
+  ],
+  "n_signals": 4
+ },
+ {
+  "company": "clickup",
+  "comp_activity": 40,
+  "incumbent_signal": "listed",
+  "tools": [
+   "CaptivateIQ",
+   "Spiff",
+   "Xactly"
+  ],
+  "n_signals": 4
+ },
+ {
+  "company": "fivetran",
+  "comp_activity": 40,
+  "incumbent_signal": "listed",
+  "tools": [
+   "CaptivateIQ",
+   "Varicent",
+   "Xactly"
+  ],
+  "n_signals": 4
+ },
+ {
+  "company": "stripe",
+  "comp_activity": 40,
+  "incumbent_signal": "listed",
+  "tools": [
+   "Varicent",
+   "Xactly"
+  ],
+  "n_signals": 3
+ },
+ {
+  "company": "zocdoc",
+  "comp_activity": 40,
+  "incumbent_signal": "listed",
+  "tools": [
+   "CaptivateIQ",
+   "Spiff",
+   "Varicent",
+   "Xactly"
+  ],
+  "n_signals": 5
+ },
+ {
+  "company": "rubrik",
+  "comp_activity": 0,
+  "incumbent_signal": "specific",
+  "tools": [
+   "Xactly"
+  ],
+  "n_signals": 1
+ },
+ {
+  "company": "grafanalabs",
+  "comp_activity": 0,
+  "incumbent_signal": "listed",
+  "tools": [
+   "CaptivateIQ",
+   "Xactly"
+  ],
+  "n_signals": 2
+ },
+ {
+  "company": "pagerduty",
+  "comp_activity": 0,
+  "incumbent_signal": "listed",
+  "tools": [
+   "CaptivateIQ",
+   "Spiff",
+   "Xactly"
+  ],
+  "n_signals": 3
+ }
+]
