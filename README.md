@@ -17,10 +17,41 @@ It was built as a take-home for a Growth Engineer role. It is a working prototyp
 
 A missing signal means no evidence was found. It does not mean the company has no need.
 
+## Sample brief
+
+One real output, generated on 16 Nov 2026 from public postings (abridged):
+
+> ### Okta
+> - Comp activity: **50/100** | Incumbent-tool signal: **specific** (Xactly)
+> - Suggested angle: Hiring a comp specialist whose posting expects Xactly experience. Open by asking what is driving the hire (plan changes outpacing tooling?) and offer a side-by-side on admin time and payout accuracy. The tool may be a skill the company wants, not what it runs: verify before assuming displacement.
+> - Evidence:
+>   - Comp role: [Senior Commissions Manager](https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512)
+>   - Comp role: [Senior Manager, GTM Compensation Strategy & Incentive Design](https://www.okta.com/company/careers/opportunity/8132596?gh_jid=8132596)
+>   - Names Xactly: [Sr. Product Analyst (Xactly)](https://www.okta.com/company/careers/opportunity/8335959?gh_jid=8335959): "Join the TDI Commissions team that supports the Xactly platform across Incent, Connect, Extend..."
+
+Every line links to the posting it came from, so a rep can check it in seconds.
+
 ## How it works
 
 ```
-companies.txt -> collect (job-board APIs) -> DuckDB -> signals (rules) -> score -> brief -> report / Slack
+  companies.txt            Greenhouse / Lever / Ashby
+  (target accounts)        public job-board APIs
+         |                          |
+         +------------> collect <---+
+                           |
+                       DuckDB (postings, first/last seen)
+                           |
+                 signals: pattern rules + evidence snippets
+                           |
+        +------------------+-------------------+
+        |                                      |
+  comp activity (0-100)             incumbent signal
+  roles, duties, spreadsheets       specific | listed | none
+        +------------------+-------------------+
+                           |
+                     account brief (Markdown, linked evidence)
+                           |
+              reports/<date>.md      Slack (optional, via n8n weekly)
 ```
 
 1. **Collect.** `python -m compsignal collect` reads open postings and stores them in DuckDB (`data/`).
