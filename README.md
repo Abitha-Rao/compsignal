@@ -125,13 +125,13 @@ workflow to your folder):
 NODES_EXCLUDE="[]" N8N_RESTRICT_FILE_ACCESS_TO=$PWD N8N_BLOCK_ENV_ACCESS_IN_NODE=false npx n8n
 ```
 
-![CompSignal n8n workflow](docs/n8n-workflow.svg)
+![CompSignal workflow in the n8n editor](docs/n8n-canvas.jpg)
 
-*Diagram drawn from the workflow file, not an editor screenshot.*
+*The workflow as it appears in the n8n editor.*
 
 Tested headlessly on n8n 2.47.7 (a 20-company collection): every node ran, from collect through to formatting
-the message. The final "Post to Slack" node errors until `SLACK_WEBHOOK_URL` is set, as expected. I have not
-used the n8n editor itself.
+the message. The final "Post to Slack" node errors until `SLACK_WEBHOOK_URL` is set, as expected. The workflow also imports
+cleanly into the n8n editor (screenshot above).
 
 ## Responsible use
 
