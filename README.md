@@ -116,9 +116,18 @@ Edit `companies.txt` to change targets. Slack is optional: set `SLACK_WEBHOOK_UR
 
 ### Weekly automation with n8n
 
-`n8n/compsignal-weekly.json` runs collect and report every Monday and posts the top accounts to Slack.
-It uses the Execute Command node, which recent n8n versions disable by default, so enable it
-(see the n8n docs) and update the folder path in the workflow. I have not run this workflow inside n8n yet.
+`n8n/compsignal-weekly.json` runs collect and report every Monday (or on demand from the "Run manually" node)
+and posts the top accounts to Slack. It uses the Execute Command node, which n8n 2.x disables by default, and
+file reads are limited to one folder, so start n8n like this (change the path and the `/Users/YOU` paths in the
+workflow to your folder):
+
+```
+NODES_EXCLUDE="[]" N8N_RESTRICT_FILE_ACCESS_TO=$PWD N8N_BLOCK_ENV_ACCESS_IN_NODE=false npx n8n
+```
+
+Tested headlessly on n8n 2.47.7 (a 20-company collection): every node ran, from collect through to formatting
+the message. The final "Post to Slack" node errors until `SLACK_WEBHOOK_URL` is set, as expected. I have not
+used the n8n editor itself.
 
 ## Responsible use
 
