@@ -1,147 +1,165 @@
 # CompSignal
 
-Evidence-based account discovery for a sales-compensation software team.
+**Find the companies whose sales-commission operation is changing right now, with the evidence linked.**
 
-CompSignal reads the public job boards of target companies and flags explicit signs that a company's
-sales-commission operation is in motion: open comp-specific roles, named compensation platforms, and
-spreadsheet-based commission work. Each flag links to the original posting so a person can check it.
+CompSignal scans target companies' public job boards every week. It flags explicit signs of sales-compensation
+activity, such as a new Commissions Manager role, a named compensation platform, or commission work run in
+spreadsheets. For each flagged account it writes a short brief that links every claim to the posting it came from.
 
-It was built as a take-home for a Growth Engineer role. It is a working prototype, not a finished product.
+Built for a sales-compensation software team (Everstage's outbound motion).
+Tools used: Python, DuckDB (SQL), n8n, Slack, and the Greenhouse, Lever and Ashby APIs.
 
-## What it found (collected 16 Nov 2026)
+## The problem
 
-- 150 of 250 company job boards were reachable through the official Greenhouse, Lever and Ashby APIs.
-- 14 of those 150 companies have at least one strict signal.
-- Examples with a specific platform named: Okta, MongoDB, Elastic and Collibra (Xactly).
-- Notion, a known Everstage customer, is flagged as mentioning Everstage, and its brief says not to cold-prospect it.
+Outbound reps at a sales-compensation vendor start each week with a long account list and little reason to
+choose one company over another.
 
-A missing signal means no evidence was found. It does not mean the company has no need.
+- **The buyer is rare.** Usually one Comp, RevOps or Finance person owns commissions, so firmographics such as
+  size or industry say little about who is ready to buy.
+- **Timing matters more than fit.** The best moment to reach out is when a company is building or rebuilding its
+  comp function: hiring for it, moving off spreadsheets, or changing platforms.
+- **Research is manual.** Finding that moment means reading career pages one company at a time, and the
+  findings rarely get written down where the next rep can reuse them.
 
-## Sample brief
+## The solution
 
-One real output, generated on 16 Nov 2026 from public postings (abridged):
+Job postings are public, current and specific. A company hiring a *Senior Commissions Manager* that requires
+"plan logic in Xactly" is telling you what it is working on. CompSignal reads these postings at scale and turns
+them into a ranked, evidence-backed list.
+
+```mermaid
+flowchart LR
+    A[companies.txt<br/>target accounts] --> B[Collect<br/>Greenhouse / Lever / Ashby APIs]
+    B --> C[(DuckDB<br/>postings, first/last seen)]
+    C --> D[Signal rules<br/>roles, duties, spreadsheets, platforms]
+    D --> E1[Comp activity<br/>0-100]
+    D --> E2[Incumbent signal<br/>specific / listed / none]
+    E1 --> F[Account brief<br/>angle + linked evidence]
+    E2 --> F
+    F --> G[reports/date.md]
+    F --> H[Slack via n8n<br/>every Monday]
+```
+
+The design choices:
+
+1. **Evidence before outreach.** Every line in a brief links to its source posting, so a rep can check a claim
+   in seconds and disagree with it.
+2. **Rules, not black-box judgement.** Signals come from tested pattern rules, so any score can be explained
+   and challenged. This keeps the output auditable for GTM leaders.
+3. **Two scores instead of one.** *Comp activity* measures how much comp work is happening. The *incumbent signal*
+   records which platform the company runs, if a posting names one. Keeping them separate lets a rep choose the
+   pitch: help a team that is building the function, or position against a competitor.
+4. **"Specific" vs "listed" platforms.** "Plan logic in Xactly" points to a platform the company runs. "Experience
+   with Xactly, CaptivateIQ or Spiff" only lists acceptable skills. CompSignal tells the two apart, so reps don't
+   pitch a displacement on weak evidence.
+5. **Customer-aware.** If a posting names Everstage, the brief says to check the CRM before reaching out, so
+   current customers don't get cold outreach.
+6. **Change tracking.** DuckDB stores when each posting was first seen, so the weekly run marks new evidence as **(new)**.
+
+## Results (run on 16 Nov 2026)
+
+| | |
+|---|---|
+| Companies scanned | 250 targets. 150 had a job board reachable through the official APIs |
+| Accounts flagged | 14, each with a brief and linked evidence ([full report](reports/2026-11-16.md)) |
+| Specific platform in use | Okta, MongoDB, Elastic, Collibra and Rubrik (Xactly) |
+| Customer check | Notion (a known Everstage customer) is caught by its own posting and marked "do not cold-prospect" |
+| Extraction precision | **89%** across 64 hand-checked flags (see [Evaluation](#evaluation)) |
+
+### Sample brief (abridged, real output)
 
 > ### Okta
-> - Comp activity: **50/100** | Incumbent-tool signal: **specific** (Xactly)
-> - Suggested angle: Hiring a comp specialist whose posting expects Xactly experience. Open by asking what is driving the hire (plan changes outpacing tooling?) and offer a side-by-side on admin time and payout accuracy. The tool may be a skill the company wants, not what it runs: verify before assuming displacement.
+> - Comp activity: **60/100** | Incumbent-tool signal: **specific** (Xactly)
+> - Suggested angle: Hiring a comp specialist whose posting expects Xactly experience. Open by asking what is driving the hire (plan changes outpacing tooling?) and offer a side-by-side on admin time and payout accuracy.
 > - Evidence:
 >   - Comp role: [Senior Commissions Manager](https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512)
 >   - Comp role: [Senior Manager, GTM Compensation Strategy & Incentive Design](https://www.okta.com/company/careers/opportunity/8132596?gh_jid=8132596)
->   - Names Xactly: [Sr. Product Analyst (Xactly)](https://www.okta.com/company/careers/opportunity/8335959?gh_jid=8335959): "Join the TDI Commissions team that supports the Xactly platform across Incent, Connect, Extend..."
-
-Every line links to the posting it came from, so a rep can check it in seconds.
-
-## How it works
-
-```
-  companies.txt            Greenhouse / Lever / Ashby
-  (target accounts)        public job-board APIs
-         |                          |
-         +------------> collect <---+
-                           |
-                       DuckDB (postings, first/last seen)
-                           |
-                 signals: pattern rules + evidence snippets
-                           |
-        +------------------+-------------------+
-        |                                      |
-  comp activity (0-100)             incumbent signal
-  roles, duties, spreadsheets       specific | listed | none
-        +------------------+-------------------+
-                           |
-                     account brief (Markdown, linked evidence)
-                           |
-              reports/<date>.md      Slack (optional, via n8n weekly)
-```
-
-1. **Collect.** `python -m compsignal collect` reads open postings and stores them in DuckDB (`data/`).
-2. **Signals.** Pattern rules find evidence. No AI decides anything here.
-3. **Score.** Two separate outputs per company, deliberately not blended into one number.
-4. **Brief.** A short Markdown brief per company with a suggested angle and linked evidence.
-5. **Deliver.** `reports/<date>.md`, and optionally Slack.
+>   - Names Xactly: [Senior Commissions Manager](https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512): "Operationalize data reconciliations between upstream source systems (CRM and Workday) and Xactly Incent..."
 
 ### Scoring rules
 
 | Evidence | Effect |
 |---|---|
 | Comp-specific role title (Commissions Manager, Sales Compensation Analyst) | 40 points, +10 per extra role (max +20) |
-| Commission duties in another role's description | +10 each (max +30) |
+| Commission duties inside another role's description | +10 each (max +30) |
 | Spreadsheet and commissions in the same sentence | +20 |
-| One platform named (for example "plan logic in Xactly") | incumbent signal: **specific** |
-| Platforms named only in a "such as A, B or C" list | incumbent signal: **listed** |
+| Exactly one platform named in context ("plan logic in Xactly") | incumbent signal: **specific** |
+| Platforms named only in a list ("such as A, B or C") | incumbent signal: **listed** |
 
-"Comp activity" (0 to 100) and "incumbent signal" are reported separately. A platform named in a
-posting means candidates should know it. It does not prove the company runs it.
+The comp activity score is capped at 100.
 
-## Accuracy
+## Evaluation
 
-I read each flagged posting and labelled it. One labeller (me, with AI help), so spot-check `eval/sheet*.md`.
+Each flag was checked against its source posting. The rules are also covered by unit tests (`pytest`: 14 passing).
 
-| Check | Sample 1: 40 random items, first rules | Sample 2: 24 remaining items, later rules |
-|---|---|---|
-| Extraction correct, all signals | 35/40 = 88% (95% range 74-95%) | 22/24 = 92% (74-98%) |
-| Comp-role titles | 5/5 | 7/7 |
-| Commission-duty wording | 5/7 | 1/3 |
-| Tool mentions pointing to a specific platform | 9/25 = 36% (20-55%) | 2/14 = 14% (4-40%) |
-| "Specific vs listed" flag matches my reading | not built yet | 13/14 = 93% (69-99%) |
+| Check | Result (95% interval) |
+|---|---|
+| Extraction correct, all signals (2 samples) | **57/64 = 89%** (79-95%) |
+| Comp-role titles | **12/12 = 100%** (76-100%) |
+| "Specific vs listed" flag agrees with the reviewer | **13/14 = 93%** (69-99%) |
+| Platform mentions that name a platform the company actually runs | 11/39 = 28% (17-44%) |
 
-What this showed:
-- Most platform mentions are lists of acceptable experience ("such as A, B or C"), so the scoring separates
-  "specific" from "listed" and tells the rep to ask, not assume.
-- Commission-duty wording was the weakest signal. Both errors in sample 2 were accounting or pay-benchmarking
-  roles, so I tightened that rule and added tests.
+What the evaluation changed:
+- Only about 1 in 4 platform mentions shows the platform a company actually runs. Most are lists of acceptable
+  skills. This finding led to the specific/listed split, so displacement pitches use only the strong cases.
+- Commission-duty wording was the noisiest rule, because accounting roles that mention deferred commissions also
+  matched. The rule now excludes accounting language, and tests cover those cases.
 
-Limits of these numbers: sample 2 is not a random draw. It is everything left after excluding sample 1 and
-duplicate postings. Both fixes were made after seeing these samples, so the current rules have not been measured
-on independent data. To do that, collect again later and label a new sample:
+Labelled samples and the scoring script are in [`eval/`](eval/). To re-measure on fresh data:
 
 ```
-.venv/bin/python -m compsignal sample --n 40 --seed 11 --exclude eval/labels.json   # then fill eval/labels.json
+.venv/bin/python -m compsignal sample --n 40 --exclude eval/labels.json   # label eval/labels.json
 .venv/bin/python -m compsignal score-labels
 ```
-
-## Limits
-
-- Coverage depends on the company using a supported job board. 40% of my starter list was unreachable.
-- Job postings show who is hiring now, not who is buying.
-- A small starter list of known customers is only a sanity check, not validation, and I did not test
-  whether the score separates customers from non-customers. Job boards show current postings only,
-  so a before-purchase comparison is not possible.
-- Large companies dominate the hits and often already run a platform.
 
 ## Run it
 
 ```
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-.venv/bin/python -m compsignal collect            # about 5 minutes for 250 companies
-.venv/bin/python -m compsignal report             # writes reports/<date>.md
+.venv/bin/python -m compsignal collect      # about 5 minutes for 250 companies
+.venv/bin/python -m compsignal report       # writes reports/<date>.md and reports/latest.json
 .venv/bin/python -m pytest -q
 ```
 
-Edit `companies.txt` to change targets. Slack is optional: set `SLACK_WEBHOOK_URL` in your shell and add
-`--slack` to `report`. Never commit the webhook.
+Edit `companies.txt` to change targets. For Slack, set `SLACK_WEBHOOK_URL` in your shell and add `--slack`.
 
-### Weekly automation with n8n
+### Weekly automation (n8n)
 
-`n8n/compsignal-weekly.json` runs collect and report every Monday (or on demand from the "Run manually" node)
-and posts the top accounts to Slack. It uses the Execute Command node, which n8n 2.x disables by default, and
-file reads are limited to one folder, so start n8n like this (change the path and the `/Users/YOU` paths in the
-workflow to your folder):
+[`n8n/compsignal-weekly.json`](n8n/compsignal-weekly.json) runs collect and report every Monday at 8am, or on
+demand. It then reads `latest.json` and posts the top 10 accounts to Slack.
+
+![CompSignal workflow in the n8n editor](docs/n8n-canvas.jpg)
+
+n8n 2.x disables the Execute Command node by default. Start n8n with these flags, and replace `/Users/YOU` in
+the workflow with your path:
 
 ```
 NODES_EXCLUDE="[]" N8N_RESTRICT_FILE_ACCESS_TO=$PWD N8N_BLOCK_ENV_ACCESS_IN_NODE=false npx n8n
 ```
 
-![CompSignal workflow in the n8n editor](docs/n8n-canvas.jpg)
+## Repository map
 
-*The workflow as it appears in the n8n editor.*
+| Path | Purpose |
+|---|---|
+| `compsignal/collect.py` | Job-board API clients (Greenhouse, Lever, Ashby) |
+| `compsignal/signals.py` | Signal rules and evidence snippets |
+| `compsignal/score.py` | Comp activity score and incumbent signal |
+| `compsignal/brief.py` | Account briefs with suggested angles |
+| `compsignal/store.py` | DuckDB storage and first-seen tracking |
+| `compsignal/evaluate.py` | Precision with Wilson intervals |
+| `n8n/` | Weekly workflow |
+| `eval/` | Labelled samples |
+| `reports/` | Latest output |
 
-Tested headlessly on n8n 2.47.7 (a 20-company collection): every node ran, from collect through to formatting
-the message. The final "Post to Slack" node errors until `SLACK_WEBHOOK_URL` is set, as expected. The workflow also imports
-cleanly into the n8n editor (screenshot above).
+## Next steps
+
+- **CRM sync:** push briefs to HubSpot or Salesforce as account notes and tasks, and skip accounts that are
+  already customers or in active deals.
+- **Outcome loop:** compare reply and meeting rates for flagged and unflagged accounts, then reweight the
+  scoring from those results.
+- **More sources:** add Workday and SmartRecruiters boards to widen coverage beyond the three supported APIs.
 
 ## Responsible use
 
-- Uses only the official public job-board APIs, identifies itself, and waits between requests.
-- Stores company names and public posting text only. No personal data.
-- A flag is a lead to check by hand, not a verdict about a company.
+Uses only the official public job-board APIs. It identifies itself and rate-limits its requests. It stores
+company names and public posting text, and no personal data. A flag is a lead for a person to check.

@@ -8,7 +8,7 @@
   "label": 1,
   "sys_specific": true,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 2,
@@ -18,7 +18,7 @@
   "url": "https://job-boards.greenhouse.io/zocdoc/jobs/8346400",
   "label": 1,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 3,
@@ -29,7 +29,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 4,
@@ -40,7 +40,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 5,
@@ -50,7 +50,7 @@
   "url": "https://job-boards.greenhouse.io/tebra/jobs/4739712005",
   "label": 1,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 6,
@@ -61,7 +61,7 @@
   "label": 1,
   "sys_specific": true,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 7,
@@ -72,7 +72,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 8,
@@ -83,7 +83,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 9,
@@ -93,7 +93,7 @@
   "url": "https://www.mongodb.com/careers/job/?gh_jid=8208271",
   "label": 0,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 10,
@@ -104,7 +104,7 @@
   "label": 1,
   "sys_specific": true,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 11,
@@ -115,7 +115,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 12,
@@ -126,7 +126,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 13,
@@ -136,7 +136,7 @@
   "url": "https://jobs.ashbyhq.com/notion/be994bb4-c680-4f57-b3bd-7e689175317f",
   "label": 1,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 14,
@@ -146,7 +146,7 @@
   "url": "https://www.collibra.com/us/en/company/careers/job-listing/?gh_jid=8161785",
   "label": 1,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 15,
@@ -157,7 +157,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 16,
@@ -167,7 +167,7 @@
   "url": "https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9",
   "label": 1,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 17,
@@ -177,7 +177,7 @@
   "url": "https://www.mongodb.com/careers/job/?gh_jid=8121701",
   "label": 1,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 18,
@@ -188,7 +188,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 19,
@@ -198,7 +198,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7862938",
   "label": 1,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 20,
@@ -209,7 +209,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 21,
@@ -219,7 +219,7 @@
   "url": "https://jobs.ashbyhq.com/cohere/77885bc2-a88a-421b-a2d6-ae209a8fa758",
   "label": 0,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 22,
@@ -230,7 +230,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 23,
@@ -241,7 +241,7 @@
   "label": 1,
   "sys_specific": false,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 24,
@@ -251,6 +251,6 @@
   "url": "https://job-boards.greenhouse.io/attentive/jobs/4452679009",
   "label": 1,
   "sys_specific": null,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  }
 ]

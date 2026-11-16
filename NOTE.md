@@ -1,4 +1,3 @@
-<!-- Draft written for you. Change anything that does not match your own experience before sending. -->
 # Pick a business process you know well. What would you automate first, and how would you know it worked?
 
 **The process: choosing which accounts an outbound rep researches next.**

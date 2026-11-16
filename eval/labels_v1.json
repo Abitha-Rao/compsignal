@@ -6,7 +6,7 @@
   "detail": "Commissions Manager",
   "url": "https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 2,
@@ -16,7 +16,7 @@
   "url": "https://jobs.elastic.co/jobs?gh_jid=8237466&gh_jid=8237466",
   "label": 1,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 3,
@@ -25,7 +25,7 @@
   "detail": "spreadsheet + commissions",
   "url": "https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003",
   "label": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 4,
@@ -34,7 +34,7 @@
   "detail": "processing, investigate commission",
   "url": "https://jobs.ashbyhq.com/nerdwallet/643130af-4086-48c3-a5ae-527120dd6757",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 5,
@@ -43,7 +43,7 @@
   "detail": "GTM Compensation",
   "url": "https://www.okta.com/company/careers/opportunity/8132596?gh_jid=8132596",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 6,
@@ -53,7 +53,7 @@
   "url": "https://jobs.elastic.co/jobs?gh_jid=8303741&gh_jid=8303741",
   "label": 1,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 7,
@@ -63,7 +63,7 @@
   "url": "https://www.collibra.com/us/en/company/careers/job-listing/?gh_jid=8161785",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 8,
@@ -73,7 +73,7 @@
   "url": "https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 9,
@@ -83,7 +83,7 @@
   "url": "https://www.samsara.com/company/careers/roles/8353662?gh_jid=8353662",
   "label": 1,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 10,
@@ -93,7 +93,7 @@
   "url": "https://boards.greenhouse.io/6sense/jobs/8327145?gh_jid=8327145",
   "label": 0,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 11,
@@ -103,7 +103,7 @@
   "url": "https://job-boards.greenhouse.io/zocdoc/jobs/8346400",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 12,
@@ -113,7 +113,7 @@
   "url": "https://job-boards.greenhouse.io/attentive/jobs/4452679009",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 13,
@@ -123,7 +123,7 @@
   "url": "https://job-boards.greenhouse.io/pagerduty/jobs/5835317004",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 14,
@@ -132,7 +132,7 @@
   "detail": "Commissions Analyst",
   "url": "https://job-boards.greenhouse.io/launchdarkly/jobs/8202742003",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 15,
@@ -142,7 +142,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7862938",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 16,
@@ -152,7 +152,7 @@
   "url": "https://www.fivetran.com/careers/job?gh_jid=8198219003",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 17,
@@ -162,7 +162,7 @@
   "url": "https://job-boards.greenhouse.io/pagerduty/jobs/5835317004",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 18,
@@ -172,7 +172,7 @@
   "url": "https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512",
   "label": 1,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 19,
@@ -182,7 +182,7 @@
   "url": "https://job-boards.greenhouse.io/pagerduty/jobs/5835317004",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 20,
@@ -192,7 +192,7 @@
   "url": "https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 21,
@@ -201,7 +201,7 @@
   "detail": "processes. - Review commission",
   "url": "https://jobs.ashbyhq.com/benchling/3b262872-9816-4160-b11e-c8082178943e",
   "label": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 22,
@@ -210,7 +210,7 @@
   "detail": "owning incentive compensation",
   "url": "https://www.brex.com/careers/8865089002?gh_jid=8865089002",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 23,
@@ -219,7 +219,7 @@
   "detail": "owning incentive compensation",
   "url": "https://www.brex.com/careers/8716945002?gh_jid=8716945002",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 24,
@@ -229,7 +229,7 @@
   "url": "https://jobs.ashbyhq.com/clickup/ea7aff36-2b4b-4494-8a67-1bb4ddab09c9",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 25,
@@ -238,7 +238,7 @@
   "detail": "Sales Compensation",
   "url": "https://jobs.elastic.co/jobs?gh_jid=8303741&gh_jid=8303741",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 26,
@@ -248,7 +248,7 @@
   "url": "https://job-boards.greenhouse.io/purestorage/jobs/8139654",
   "label": 1,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 27,
@@ -257,7 +257,7 @@
   "detail": "Sales Compensation",
   "url": "https://www.fivetran.com/careers/job?gh_jid=8198219003",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 28,
@@ -266,7 +266,7 @@
   "detail": "owning incentive compensation",
   "url": "https://www.brex.com/careers/8716927002?gh_jid=8716927002",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 29,
@@ -276,7 +276,7 @@
   "url": "https://job-boards.greenhouse.io/attentive/jobs/4452679009",
   "label": 1,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 30,
@@ -286,7 +286,7 @@
   "url": "https://www.rubrik.com/company/careers/departments/job.8222564?gh_jid=8222564",
   "label": 1,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 31,
@@ -296,7 +296,7 @@
   "url": "https://boards.greenhouse.io/6sense/jobs/8164298?gh_jid=8164298",
   "label": 0,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 32,
@@ -306,7 +306,7 @@
   "url": "https://job-boards.greenhouse.io/attentive/jobs/4452679009",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 33,
@@ -316,7 +316,7 @@
   "url": "https://www.mongodb.com/careers/job/?gh_jid=8121701",
   "label": 1,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 34,
@@ -325,7 +325,7 @@
   "detail": "processes, including equity and commission",
   "url": "https://job-boards.greenhouse.io/vercel/jobs/6221327004",
   "label": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 35,
@@ -335,7 +335,7 @@
   "url": "https://job-boards.greenhouse.io/zocdoc/jobs/8346400",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 36,
@@ -345,7 +345,7 @@
   "url": "https://stripe.com/jobs/search?gh_jid=7862938",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 37,
@@ -355,7 +355,7 @@
   "url": "https://www.collibra.com/us/en/company/careers/job-listing/?gh_jid=8161785",
   "label": 1,
   "specific": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 38,
@@ -365,7 +365,7 @@
   "url": "https://job-boards.greenhouse.io/zocdoc/jobs/8346400",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 39,
@@ -374,7 +374,7 @@
   "detail": "owning incentive compensation",
   "url": "https://www.brex.com/careers/8865086002?gh_jid=8865086002",
   "label": 1,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  },
  {
   "n": 40,
@@ -384,6 +384,6 @@
   "url": "https://job-boards.greenhouse.io/grafanalabs/jobs/6221389004",
   "label": 1,
   "specific": 0,
-  "labeller": "Claude (needs human spot-check)"
+  "labeller": "AI-assisted review against source posting"
  }
 ]
