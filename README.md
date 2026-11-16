@@ -112,16 +112,29 @@ Labelled samples and the scoring script are in [`eval/`](eval/). To re-measure o
 .venv/bin/python -m compsignal score-labels
 ```
 
-## Run it
+## Quick start (5 minutes)
+
+Needs Python 3.10+ and git. No API keys are required.
 
 ```
-python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-.venv/bin/python -m compsignal collect      # about 5 minutes for 250 companies
-.venv/bin/python -m compsignal report       # writes reports/<date>.md and reports/latest.json
-.venv/bin/python -m pytest -q
+git clone https://github.com/Abitha-Rao/compsignal.git
+cd compsignal
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+.venv/bin/python -m compsignal collect --limit 20   # quick trial on 20 companies; drop --limit for all
+.venv/bin/python -m compsignal report
 ```
 
-Edit `companies.txt` to change targets. For Slack, set `SLACK_WEBHOOK_URL` in your shell and add `--slack`.
+On Windows, use `py -m venv .venv` and `.venv\Scripts\python` in place of `.venv/bin/python`.
+
+| Output | What it is |
+|---|---|
+| `reports/<date>.md` | Readable briefs, highest-scoring accounts first |
+| `reports/latest.json` | The same results as JSON for automation (n8n, CRM import) |
+| `data/compsignal.duckdb` | All collected postings with first and last seen dates. Query it with SQL |
+
+Other commands: `report --min-score 60` keeps only stronger accounts, `report --slack` posts to Slack, and
+`.venv/bin/python -m pytest -q` runs the tests.
 
 ### Weekly automation (n8n)
 
@@ -136,6 +149,25 @@ the workflow with your path:
 ```
 NODES_EXCLUDE="[]" N8N_RESTRICT_FILE_ACCESS_TO=$PWD N8N_BLOCK_ENV_ACCESS_IN_NODE=false npx n8n
 ```
+
+## Set it up for your team
+
+1. **Choose your target accounts.** Put one job-board name per line in `companies.txt`. Lines that start with
+   `#` are comments. To find a company's name, open its careers page and look at the job links:
+   `boards.greenhouse.io/okta` or `job-boards.greenhouse.io/okta` → `okta`, `jobs.lever.co/acme` → `acme`,
+   `jobs.ashbyhq.com/notion` → `notion`. Names that do not match a board are skipped. You can export the list
+   from your CRM, one name per line.
+2. **Connect Slack (optional).** In Slack, create an app with *Incoming Webhooks* turned on, add it to a
+   channel, and copy the webhook URL. Set it as an environment variable on the machine that runs CompSignal:
+   `export SLACK_WEBHOOK_URL=https://hooks.slack.com/...`. Keep it out of the repo.
+3. **Schedule it.** Run it on a machine that is always on, such as a small cloud VM or a shared ops server,
+   so the Monday run happens without anyone's laptop. Either:
+   - import `n8n/compsignal-weekly.json` into a self-hosted n8n (steps below), or
+   - add a cron job: `0 8 * * 1 cd /path/to/compsignal && .venv/bin/python -m compsignal collect && .venv/bin/python -m compsignal report --slack`
+4. **Use the output.** Reps read the Slack summary and the brief in `reports/`. To load results into
+   Salesforce or HubSpot, import `reports/latest.json`, or add an HTTP node to the n8n workflow.
+5. **Keep it accurate.** About once a month, run `sample`, check the flagged items against their postings, and
+   run `score-labels`. Signal rules live in `compsignal/signals.py`. Each rule has tests in `tests/`.
 
 ## Repository map
 
