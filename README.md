@@ -69,12 +69,12 @@ The design choices:
    A draft that fails a check is dropped and the reason is logged. Known customers and weak signals are skipped
    before any call is made. Rules still decide who is flagged, and Claude only writes the outreach.
 
-## Results (run on 16 Nov 2026)
+## Results (postings collected 16 Nov 2026)
 
 | | |
 |---|---|
 | Companies scanned | 250 targets. 150 had a job board reachable through the official APIs |
-| Accounts flagged | 14, each with a brief and linked evidence ([full report](reports/2026-11-16.md)) |
+| Accounts flagged | 14, each with a brief and linked evidence ([full report](reports/2026-11-18.md)) |
 | Specific platform in use | Okta, MongoDB, Elastic, Collibra and Rubrik (Xactly) |
 | Customer check | Notion (a known Everstage customer) is caught by its own posting and marked "do not cold-prospect" |
 | Claude drafts | 8 first-touch emails for the top 10 accounts. All 8 passed the evidence checks, and the 2 likely customers were skipped ([drafts](reports/2026-11-18-drafts.md)) |

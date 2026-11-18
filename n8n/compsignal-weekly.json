@@ -79,7 +79,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const rows = ($input.first().json.data || []).slice(0, 10);\nconst lines = rows.map(r => `- *${r.company}* comp ${r.comp_activity}/100, tools: ${r.incumbent_signal} ${r.tools.join(', ')}`);\nreturn [{ json: { text: `*CompSignal weekly: top ${rows.length} accounts*\\n` + lines.join('\\n') } }];"
+        "jsCode": "const rows = ($input.first().json.data || []).slice(0, 10);\nconst lines = rows.map(r => `- *${r.name || r.company}* comp ${r.comp_activity}/100, tools: ${r.incumbent_signal} ${r.tools.join(', ')}`);\nreturn [{ json: { text: `*CompSignal weekly: top ${rows.length} accounts*\\n` + lines.join('\\n') } }];"
       },
       "id": "a5",
       "name": "Format message",

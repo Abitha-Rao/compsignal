@@ -1,6 +1,8 @@
 """Deterministic, explainable scoring. Two separate outputs per company; no blended number."""
 from collections import defaultdict
 
+from .names import display_name
+
 
 def comp_activity_score(signals):
     """0-100. Weights are explicit so anyone can challenge them."""
@@ -40,6 +42,7 @@ def summarize(company, signals):
     strength, tools = incumbent_tool_signal(signals)
     return {
         "company": company,
+        "name": display_name(company),
         "comp_activity": comp_activity_score(signals),
         "incumbent_signal": strength,
         "tools": tools,

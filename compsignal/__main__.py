@@ -62,7 +62,7 @@ def cmd_report(a):
     json.dump([s for s, _, _ in rows], open("reports/latest.json", "w"), indent=1)
     print(f"{len(rows)} flagged of {total}. Wrote {path}")
     for s, _, _ in rows[:15]:
-        print(f"  {s['company']:14} comp={s['comp_activity']:3} tools={s['incumbent_signal']:8} {','.join(s['tools'])}")
+        print(f"  {s['name']:14} comp={s['comp_activity']:3} tools={s['incumbent_signal']:8} {','.join(s['tools'])}")
     if a.slack:
         print(notify.post_slack(rows[:10], today))
 

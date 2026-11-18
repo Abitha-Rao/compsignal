@@ -8,7 +8,7 @@ from compsignal.signals import Signal
 URL = "https://example.com/jobs/1"
 SIGS = [Signal("comp_role_title", "Commissions Manager", "Commissions Manager", "Commissions Manager", URL, True, False),
         Signal("tool", "Xactly", "...such as Xactly, Spiff or CaptivateIQ...", "Commissions Manager", URL, True, False)]
-LISTED = {"company": "acme", "comp_activity": 40, "incumbent_signal": "listed", "tools": ["Xactly", "Spiff"]}
+LISTED = {"company": "acme", "name": "Acme", "comp_activity": 40, "incumbent_signal": "listed", "tools": ["Xactly", "Spiff"]}
 BODY = ("Saw you're hiring a Commissions Manager. Teams that add that role are often scaling plans faster "
         "than their payout process. Everstage helps comp teams run commissions without spreadsheets, so new "
         "plans go live in days and reps can see what they will earn. Would it be useful to compare how your "

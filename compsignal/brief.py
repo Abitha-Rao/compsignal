@@ -25,7 +25,7 @@ def _angle(summary, signals):
 
 
 def make_brief(summary, signals, new_urls=()):
-    lines = [f"### {summary['company']}",
+    lines = [f"### {summary['name']}",
              f"- Comp activity: **{summary['comp_activity']}/100** | Incumbent-tool signal: "
              f"**{summary['incumbent_signal']}**" + (f" ({', '.join(summary['tools'])})" if summary["tools"] else ""),
              f"- Suggested angle: {_angle(summary, signals)}",

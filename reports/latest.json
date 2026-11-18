@@ -1,6 +1,7 @@
 [
  {
   "company": "okta",
+  "name": "Okta",
   "comp_activity": 60,
   "incumbent_signal": "specific",
   "tools": [
@@ -10,6 +11,7 @@
  },
  {
   "company": "launchdarkly",
+  "name": "LaunchDarkly",
   "comp_activity": 60,
   "incumbent_signal": "listed",
   "tools": [
@@ -22,6 +24,7 @@
  },
  {
   "company": "collibra",
+  "name": "Collibra",
   "comp_activity": 40,
   "incumbent_signal": "specific",
   "tools": [
@@ -31,6 +34,7 @@
  },
  {
   "company": "elastic",
+  "name": "Elastic",
   "comp_activity": 40,
   "incumbent_signal": "specific",
   "tools": [
@@ -40,6 +44,7 @@
  },
  {
   "company": "mongodb",
+  "name": "MongoDB",
   "comp_activity": 40,
   "incumbent_signal": "specific",
   "tools": [
@@ -49,6 +54,7 @@
  },
  {
   "company": "notion",
+  "name": "Notion",
   "comp_activity": 40,
   "incumbent_signal": "specific",
   "tools": [
@@ -58,6 +64,7 @@
  },
  {
   "company": "attentive",
+  "name": "Attentive",
   "comp_activity": 40,
   "incumbent_signal": "listed",
   "tools": [
@@ -69,6 +76,7 @@
  },
  {
   "company": "clickup",
+  "name": "ClickUp",
   "comp_activity": 40,
   "incumbent_signal": "listed",
   "tools": [
@@ -80,6 +88,7 @@
  },
  {
   "company": "fivetran",
+  "name": "Fivetran",
   "comp_activity": 40,
   "incumbent_signal": "listed",
   "tools": [
@@ -91,6 +100,7 @@
  },
  {
   "company": "stripe",
+  "name": "Stripe",
   "comp_activity": 40,
   "incumbent_signal": "listed",
   "tools": [
@@ -101,6 +111,7 @@
  },
  {
   "company": "zocdoc",
+  "name": "Zocdoc",
   "comp_activity": 40,
   "incumbent_signal": "listed",
   "tools": [
@@ -113,6 +124,7 @@
  },
  {
   "company": "rubrik",
+  "name": "Rubrik",
   "comp_activity": 10,
   "incumbent_signal": "specific",
   "tools": [
@@ -122,6 +134,7 @@
  },
  {
   "company": "grafanalabs",
+  "name": "Grafana Labs",
   "comp_activity": 0,
   "incumbent_signal": "listed",
   "tools": [
@@ -132,6 +145,7 @@
  },
  {
   "company": "pagerduty",
+  "name": "PagerDuty",
   "comp_activity": 0,
   "incumbent_signal": "listed",
   "tools": [

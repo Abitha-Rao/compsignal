@@ -68,7 +68,7 @@ def check(draft, summary, evidence):
 def write_draft(client, summary, signals):
     """Return (draft or None, problems)."""
     evidence = evidence_for(signals)
-    payload = {"company": summary["company"], "comp_activity": summary["comp_activity"],
+    payload = {"company": summary["name"], "comp_activity": summary["comp_activity"],
                "incumbent_signal": summary["incumbent_signal"], "platforms": summary["tools"],
                "evidence": evidence}
     response = client.beta.messages.create(
@@ -105,14 +105,14 @@ def make_drafts(rows, client=None):
     for summary, signals, _ in rows:
         reason = skip_reason(summary)
         if reason:
-            out.append(f"### {summary['company']}\n_Skipped: {reason}._\n")
+            out.append(f"### {summary['name']}\n_Skipped: {reason}._\n")
             continue
         draft, problems = write_draft(client, summary, signals)
         if draft is None:
-            out.append(f"### {summary['company']}\n_Draft rejected by checks: {'; '.join(problems)}._\n")
+            out.append(f"### {summary['name']}\n_Draft rejected by checks: {'; '.join(problems)}._\n")
             continue
         kept += 1
         cites = "\n".join(f"  - {u}" for u in draft["evidence_urls"])
-        out.append(f"### {summary['company']}\n**Subject:** {draft['subject']}\n\n{draft['body']}\n\n"
+        out.append(f"### {summary['name']}\n**Subject:** {draft['subject']}\n\n{draft['body']}\n\n"
                    f"Evidence used:\n{cites}\n")
     return kept, "\n".join(out)
