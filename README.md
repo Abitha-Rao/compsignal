@@ -7,7 +7,7 @@ activity, such as a new Commissions Manager role, a named compensation platform,
 spreadsheets. For each flagged account it writes a short brief that links every claim to the posting it came from.
 
 Built for a sales-compensation software team (Everstage's outbound motion).
-Tools used: Python, DuckDB (SQL), n8n, Slack, and the Greenhouse, Lever and Ashby APIs.
+Tools used: Python, Claude (Anthropic API), DuckDB (SQL), n8n, Slack, and the Greenhouse, Lever and Ashby APIs.
 
 ## The problem
 
@@ -38,6 +38,10 @@ flowchart LR
     E2 --> F
     F --> G[reports/date.md]
     F --> H[Slack via n8n<br/>every Monday]
+    F --> I[Claude drafts<br/>first-touch email]
+    I --> J{Evidence checks}
+    J -->|pass| K[reports/date-drafts.md]
+    J -->|fail| L[dropped, reason logged]
 ```
 
 The design choices:
@@ -55,6 +59,15 @@ The design choices:
 5. **Customer-aware.** If a posting names Everstage, the brief says to check the CRM before reaching out, so
    current customers don't get cold outreach.
 6. **Change tracking.** DuckDB stores when each posting was first seen, so the weekly run marks new evidence as **(new)**.
+7. **Claude writes the draft, and code checks it.** Claude turns each brief's evidence into a first-touch email
+   that the rep can edit, and returns it as structured JSON with the URLs it relied on. Code then checks every
+   draft before a rep sees it:
+   - it cites at least one evidence URL, and every cited URL belongs to that account;
+   - it names a platform only when the incumbent signal is "specific";
+   - its length is within limits.
+
+   A draft that fails a check is dropped and the reason is logged. Known customers and weak signals are skipped
+   before any call is made. Rules still decide who is flagged, and Claude only writes the outreach.
 
 ## Results (run on 16 Nov 2026)
 
@@ -90,7 +103,8 @@ The comp activity score is capped at 100.
 
 ## Evaluation
 
-Each flag was checked against its source posting. The rules are also covered by unit tests (`pytest`: 14 passing).
+Each flag was checked against its source posting. Unit tests cover the signal rules and the draft checks
+(`pytest`: 20 passing). The draft tests use a stand-in for the API, so they need no key and no network.
 
 | Check | Result (95% interval) |
 |---|---|
@@ -132,6 +146,14 @@ On Windows, use `py -m venv .venv` and `.venv\Scripts\python` in place of `.venv
 | `reports/<date>.md` | Readable briefs, highest-scoring accounts first |
 | `reports/latest.json` | The same results as JSON for automation (n8n, CRM import) |
 | `data/compsignal.duckdb` | All collected postings with first and last seen dates. Query it with SQL |
+
+To have Claude write first-touch emails for the top 10 accounts (needs an
+[Anthropic API key](https://console.anthropic.com/)):
+
+```
+export ANTHROPIC_API_KEY=...                       # keep it out of the repo
+.venv/bin/python -m compsignal draft --top 10      # writes reports/<date>-drafts.md
+```
 
 Other commands: `report --min-score 60` keeps only stronger accounts, `report --slack` posts to Slack, and
 `.venv/bin/python -m pytest -q` runs the tests.
@@ -177,6 +199,7 @@ NODES_EXCLUDE="[]" N8N_RESTRICT_FILE_ACCESS_TO=$PWD N8N_BLOCK_ENV_ACCESS_IN_NODE
 | `compsignal/signals.py` | Signal rules and evidence snippets |
 | `compsignal/score.py` | Comp activity score and incumbent signal |
 | `compsignal/brief.py` | Account briefs with suggested angles |
+| `compsignal/draft.py` | Claude first-touch drafts and evidence checks |
 | `compsignal/store.py` | DuckDB storage and first-seen tracking |
 | `compsignal/evaluate.py` | Precision with Wilson intervals |
 | `n8n/` | Weekly workflow |

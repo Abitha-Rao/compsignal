@@ -94,6 +94,24 @@ def cmd_sample(a):
     print(f"Sampled {len(key)} of {len(items)} evidence items -> eval/sheet.md, eval/labels.json")
 
 
+def cmd_draft(a):
+    """Claude writes first-touch emails for the top accounts from their linked evidence."""
+    from . import draft
+    if not (os.environ.get("ANTHROPIC_API_KEY") or os.environ.get("ANTHROPIC_AUTH_TOKEN")):
+        raise SystemExit("Set ANTHROPIC_API_KEY first (https://console.anthropic.com/). Keep it out of the repo.")
+    con = store.connect()
+    rows = [r for r in analyse_all(con) if r[0]["comp_activity"] >= 40 or r[0]["incumbent_signal"] != "none"]
+    kept, md = draft.make_drafts(rows[: a.top])
+    today = dt.date.today().isoformat()
+    os.makedirs("reports", exist_ok=True)
+    path = f"reports/{today}-drafts.md"
+    open(path, "w", encoding="utf8").write(
+        f"# CompSignal first-touch drafts - {today}\n"
+        f"Written by Claude ({draft.MODEL}) from linked evidence only; each draft passed the evidence checks. "
+        "Review before sending.\n\n" + md)
+    print(f"{kept} drafts passed checks. Wrote {path}")
+
+
 def main():
     p = argparse.ArgumentParser(prog="compsignal")
     sub = p.add_subparsers(required=True)
@@ -103,6 +121,7 @@ def main():
     r.add_argument("--slack", action="store_true"); r.set_defaults(fn=cmd_report)
     s = sub.add_parser("sample"); s.add_argument("--n", type=int, default=40)
     s.add_argument("--seed", type=int, default=7); s.add_argument("--exclude"); s.set_defaults(fn=cmd_sample)
+    d = sub.add_parser("draft"); d.add_argument("--top", type=int, default=10); d.set_defaults(fn=cmd_draft)
     l = sub.add_parser("score-labels"); l.set_defaults(fn=lambda a: print(evaluate.score()))
     a = p.parse_args(); a.fn(a)
 
