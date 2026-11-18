@@ -77,6 +77,7 @@ The design choices:
 | Accounts flagged | 14, each with a brief and linked evidence ([full report](reports/2026-11-16.md)) |
 | Specific platform in use | Okta, MongoDB, Elastic, Collibra and Rubrik (Xactly) |
 | Customer check | Notion (a known Everstage customer) is caught by its own posting and marked "do not cold-prospect" |
+| Claude drafts | 8 first-touch emails for the top 10 accounts. All 8 passed the evidence checks, and the 2 likely customers were skipped ([drafts](reports/2026-11-18-drafts.md)) |
 | Extraction precision | **89%** across 64 hand-checked flags (see [Evaluation](#evaluation)) |
 
 ### Sample brief (abridged, real output)
@@ -88,6 +89,23 @@ The design choices:
 >   - Comp role: [Senior Commissions Manager](https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512)
 >   - Comp role: [Senior Manager, GTM Compensation Strategy & Incentive Design](https://www.okta.com/company/careers/opportunity/8132596?gh_jid=8132596)
 >   - Names Xactly: [Senior Commissions Manager](https://www.okta.com/company/careers/opportunity/8155512?gh_jid=8155512): "Operationalize data reconciliations between upstream source systems (CRM and Workday) and Xactly Incent..."
+
+### Sample Claude draft (real output, unedited)
+
+> **Subject:** Your Senior Sales Compensation Engineer role
+>
+> Hi,
+>
+> Saw MongoDB is hiring a Senior Sales Compensation Engineer, someone to be the in-house expert on commissions processing, the Xactly product suite, and how each commission plan component runs inside it.
+>
+> When a team needs a dedicated engineer to own how plans are configured, that work often keeps growing as plans change. Everstage is a sales commission platform built so comp and RevOps teams can set up and adjust plan logic themselves, with less reliance on specialist configuration work.
+>
+> Would it be useful to compare how your team handles plan changes in Xactly today with how that would work in Everstage?
+>
+> *Evidence used: [Senior Sales Compensation Engineer](https://www.mongodb.com/careers/job/?gh_jid=8121701)*
+
+The draft can name Xactly because MongoDB's incumbent signal is "specific". For accounts where platforms appear
+only in a list (Stripe, ClickUp), the drafts name no platform.
 
 ### Scoring rules
 
