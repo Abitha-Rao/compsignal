@@ -13,8 +13,10 @@ def wilson(k, n, z=1.96):
     return max(0.0, c - h), min(1.0, c + h)
 
 
-def score(path="eval/labels.json"):
-    rows = [r for r in json.load(open(path)) if r["label"] is not None]
+def score(paths=("eval/labels.json",)):
+    if isinstance(paths, str):
+        paths = (paths,)
+    rows = [r for p in paths for r in json.load(open(p)) if r["label"] is not None]
     out = []
     def line(name, k, n):
         lo, hi = wilson(k, n)

@@ -122,7 +122,8 @@ def main():
     s = sub.add_parser("sample"); s.add_argument("--n", type=int, default=40)
     s.add_argument("--seed", type=int, default=7); s.add_argument("--exclude"); s.set_defaults(fn=cmd_sample)
     d = sub.add_parser("draft"); d.add_argument("--top", type=int, default=10); d.set_defaults(fn=cmd_draft)
-    l = sub.add_parser("score-labels"); l.set_defaults(fn=lambda a: print(evaluate.score()))
+    l = sub.add_parser("score-labels"); l.add_argument("files", nargs="*", default=["eval/labels.json"])
+    l.set_defaults(fn=lambda a: print(evaluate.score(a.files)))
     a = p.parse_args(); a.fn(a)
 
 

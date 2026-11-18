@@ -142,6 +142,7 @@ Labelled samples and the scoring script are in [`eval/`](eval/). To re-measure o
 ```
 .venv/bin/python -m compsignal sample --n 40 --exclude eval/labels.json   # label eval/labels.json
 .venv/bin/python -m compsignal score-labels
+.venv/bin/python -m compsignal score-labels eval/labels_v1.json eval/labels.json   # both samples pooled
 ```
 
 ## Quick start (5 minutes)
